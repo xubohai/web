@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加载中...</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="bg-decoration"></div>
+    <div id="header-container"></div>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-greeting">
+                        <span class="greeting">你好</span>
+                        <span class="divider">·</span>
+                        <span class="intro">我是</span>
+                    </div>
+                    <h1 class="hero-name">${siteConfig.author}</h1>
+                    <p class="hero-description">${siteConfig.description}</p>
+                    <div class="hero-buttons">
+                        <a href="/portfolio.html" class="btn primary-btn">查看作品</a>
+                        <a href="/contact.html" class="btn secondary-btn">联系我</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/hero-image.jpg" alt="个人照片">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script type="module">
+        import Header from './assets/js/components/header.js'; import Footer from './assets/js/components/footer.js'; import Home from './assets/js/components/home.js'; async function initPage() { const header = new Header(); await header.init(); const home =
+        new Home(); await home.init(); const footer = new Footer(); await footer.init(); } initPage();
+    </script>
+</body>
+
+</html>

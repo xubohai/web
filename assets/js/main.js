@@ -1,0 +1,1 @@
+import { siteConfig } from './config/site.js';
